@@ -5,7 +5,7 @@ import { workoutData } from '../WorkoutData';
 import { GiWeightLiftingUp, GiFire } from 'react-icons/gi';
 import { FaDumbbell } from 'react-icons/fa';
 
-const Dashboard = () => {
+const ProgressHistory = () => {
   const [exerciseData, setExerciseData] = useState([]);
   const [exerciseCategoryData, setExerciseCategoryData] = useState([]);
 
@@ -49,40 +49,40 @@ const Dashboard = () => {
   const totalExercises = exerciseCategoryData?.length || 0;
 
   return (
-    <Box className="bg-transparent p-4 flex flex-col items-center justify-center">
-      <Box className="flex justify-between mb-4">
-        <Box className="flex-1 mr-4">
-          <Typography variant="h5" className="text-white mb-4">
-            <FaDumbbell style={{ marginRight: '0.5rem' }} />
+    <Box className="bg-transparent p-4 flex flex-col items-center justify-center ">
+      <Box className="flex justify-between mb-4 bg-gradient-to-tl from-sky-900 via-gray-900 bg-opacity-80 rounded-xl">
+        <Box className="flex-1 m-4">
+          <Typography variant="h5" style={{ color: 'deepPink', fontWeight:'bolder' }} >
+            <FaDumbbell className=" m-4 "/>
             Total Exercises per Category
           </Typography>
           <LineChart width={600} height={600} data={exerciseChartData}>
-            <XAxis dataKey="name" stroke="#000000" />
-            <YAxis stroke="#000000" />
+            <XAxis dataKey="name" stroke="yellow" />
+            <YAxis stroke="yellow" />
             <CartesianGrid stroke="#555" strokeDasharray="5 5" />
             <Tooltip />
             <Legend />
-            <Line type="monotone" dataKey="exercises" stroke="#00ff00" fill="white" />
+            <Line type="monotone" dataKey="exercises" stroke="skyblue" fill="white" />
           </LineChart>
         </Box>
-        <Box className="flex-1 ml-4">
-          <Typography variant="h5" style={{ color: 'white', marginBottom: '1rem' }}>
-            <GiFire style={{ marginRight: '0.5rem' }} />
+        <Box className="flex-1 mr-6 ">
+          <Typography variant="h5" style={{ color: 'deepPink', marginBottom: '1rem' , fontWeight:'bolder'}}>
+            <GiFire className="m-4 "/>
             Calories Burned per Exercise
           </Typography>
           <BarChart width={600} height={600} data={calorieChartData}>
-            <XAxis dataKey="name" stroke="#000000" />
-            <YAxis stroke="#000000" />
+            <XAxis dataKey="name" stroke="lightyellow" />
+            <YAxis stroke="limegreen" />
             <CartesianGrid stroke="#555" strokeDasharray="5 5" />
             <Tooltip />
             <Legend />
-            <Bar dataKey="calories" fill="#eb1975" />
+            <Bar dataKey="calories" fill="limegreen" />
           </BarChart>
         </Box>
       </Box>
       <Box>
-        <Typography variant="h4" className="text-white mt-8">
-          <GiWeightLiftingUp className="mr-2" />
+        <Typography variant="h4" className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500 ">
+          <GiWeightLiftingUp className="mr-2 text-4xl text-white" />
           Total Exercises: {totalExercises}
         </Typography>
       </Box>
@@ -90,4 +90,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default ProgressHistory;

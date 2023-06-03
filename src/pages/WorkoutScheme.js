@@ -118,7 +118,7 @@ const WorkoutScheme = () => {
   
   return (
 <Box
-  className="p-2 bg-gradient-to-r from-black via-gray-900 to-gray-800 shadow-md rounded-md overflow-hidden bg-transparent"
+  className="p-2 bg-gradient-to-tl from-sky-900 via-gray-900 bg-opacity-80 rounded-xl"
 >
   <Typography variant="h1" gutterBottom className="text-white">
     Workout

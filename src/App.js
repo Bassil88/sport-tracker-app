@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Sidebar';
-import Dashboard from './pages/Dashboard';
+import ProgressHistory from './pages/ProgressHistory';
 import SignIn from './pages/SignIn';
 import WorkoutScheme from './pages/WorkoutScheme';
 import Profile from './pages/Profile';
@@ -20,8 +20,8 @@ const App = () => {
         <div className="flex-1">
           <Routes>
           <Route exact={true} path="/" element={<Home />} />
-            <Route path="/dashboard" element={<Dashboard />} >
-            <Route path="/dashboard/footer" element={<Footer />} />
+            <Route path="/progresshistory" element={<ProgressHistory />} >
+            <Route path="/progresshistory/footer" element={<Footer />} />
 
             </Route>
             <Route path="/SignIn" element={<SignIn />} />

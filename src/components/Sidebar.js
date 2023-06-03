@@ -3,17 +3,29 @@ import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className="bg-gradient-to-r from-black via-gray-900 to-gray-800 h-screen w-0.5/5 p-4 shadow-xl shadow-sky-500">
+    <div className="bg-gradient-to-r from-black via-gray-900 bg-opacity-80 h-screen w-0.5/5 p-4 shadow-xl shadow-sky-500">
       <nav>
         <ul>
-          <li className="py-4 flex">
+
+        <li className="py-4 flex">
             <NavLink
               exact
-              to="/dashboard"
+              to="/"
               className="text-green-100 text-lg hover:text-sky-500"
               activeClassName="font-bold"
             >
-              Dashboard
+              Home
+            </NavLink>
+          </li>
+
+          <li className="py-4 flex">
+            <NavLink
+              exact
+              to="/progresshistory"
+              className="text-green-100 text-lg hover:text-sky-500"
+              activeClassName="font-bold"
+            >
+              Progress History
             </NavLink>
           </li>
           <li className="py-4 flex">
@@ -36,7 +48,7 @@ const Sidebar = () => {
               Workout Scheme
             </NavLink>
           </li>
-          <li className="py-4 flex">
+{/*           <li className="py-4 flex">
             <NavLink
               exact
               to="/profile"
@@ -45,17 +57,8 @@ const Sidebar = () => {
             >
               Profile
             </NavLink>
-          </li>
-          <li className="py-4 flex">
-            <NavLink
-              exact
-              to="/ContactPage"
-              className="text-green-100 text-lg hover:text-sky-500"
-              activeClassName="font-bold"
-            >
-              ContactPage
-            </NavLink>
-          </li>
+          </li> */}
+
           <li className="py-4 flex">
             <NavLink
               exact
@@ -63,9 +66,21 @@ const Sidebar = () => {
               className="text-green-100 text-lg hover:text-sky-500"
               activeClassName="font-bold"
             >
-              ReviewsPage
+              Reviews
             </NavLink>
           </li>
+
+          <li className="py-4 flex">
+            <NavLink
+              exact
+              to="/ContactPage"
+              className="text-green-100 text-lg hover:text-sky-500"
+              activeClassName="font-bold"
+            >
+              Contact us
+            </NavLink>
+          </li>
+
         </ul>
       </nav>
     </div>

@@ -2,8 +2,8 @@ import React from 'react';
 
 const ReviewPage = () => {
   return (
-    <section className="text-gray-400 bg-gray-900 body-font">
-      <div className="container px-5 py-24 mx-auto">
+    <section className="text-gray-400 body-font bg-gradient-to-r from-sky-900 via-gray-900 bg-opacity-80 rounded-xl ">
+      <div className="container px-5 py-24 mx-auto ">
         <div className="flex flex-wrap -m-4">
           <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
             <div className="h-full text-center">

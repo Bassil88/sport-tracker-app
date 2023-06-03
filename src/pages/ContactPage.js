@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactPage = () => {
   return (
-    <section className="text-gray-400 bg-gray-900 body-font relative">
+    <section className="text-gray-400 bg-gradient-to-b from-sky-900  via-gray-900 bg-opacity-80 rounded-xl body-font relative">
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
@@ -24,7 +24,7 @@ const ContactPage = () => {
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">EMAIL</h2>
-              <a href="mailto:example@email.com" className="text-sky-400 leading-relaxed">
+              <a href="mailto:example@email.com" className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
                 example@email.com
               </a>
               <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">PHONE</h2>
@@ -33,41 +33,41 @@ const ContactPage = () => {
           </div>
         </div>
         <div className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-white text-lg mb-1 font-medium title-font">Feedback</h2>
+          <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500 text-lg mb-1 font-medium title-font">Feedback</h2>
           <p className="leading-relaxed mb-5">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
           <div className="relative mb-4">
-            <label htmlFor="name" className="leading-7 text-sm text-gray-400">
+            <label htmlFor="name" className="leading-7 text-sm bg-clip-text text-transparent bg-gradient-to-bl from-green-400 via-pink-500 to-purple-500 ">
               Name
             </label>
             <input
               type="text"
               id="name"
               name="name"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
             />
           </div>
           <div className="relative mb-4">
-            <label htmlFor="email" className="leading-7 text-sm text-gray-400">
+            <label htmlFor="email" className="leading-7 text-sm bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500 ">
               Email
             </label>
             <input
               type="email"
               id="email"
               name="email"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
             />
           </div>
           <div className="relative mb-4">
-            <label htmlFor="message" className="leading-7 text-sm text-gray-400">
+            <label htmlFor="message" className="leading-7 text-sm bg-clip-text text-transparent bg-gradient-to-l from-green-400 via-pink-500 to-purple-500 ">
               Message
             </label>
             <textarea
               id="message"
               name="message"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
             ></textarea>
           </div>
-          <button className="flex w-full justify-center rounded-md shadow-md shadow-sky-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          <button className="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out">
             Button
           </button>
           <p className="text-xs text-gray-400 text-opacity-90 mt-3">
