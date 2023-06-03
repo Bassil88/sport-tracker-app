@@ -49,40 +49,40 @@ const Dashboard = () => {
   const totalExercises = exerciseCategoryData?.length || 0;
 
   return (
-    <Box style={{ backgroundColor: '#000000', padding: '1rem' }}>
-      <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Box style={{ flex: 1, marginRight: '1rem' }}>
-          <Typography variant="h4" style={{ color: '#fff', marginBottom: '1rem' }}>
+    <Box className="bg-transparent p-4 flex flex-col items-center justify-center">
+      <Box className="flex justify-between mb-4">
+        <Box className="flex-1 mr-4">
+          <Typography variant="h5" className="text-white mb-4">
             <FaDumbbell style={{ marginRight: '0.5rem' }} />
             Total Exercises per Category
           </Typography>
-          <LineChart width={500} height={300} data={exerciseChartData}>
-            <XAxis dataKey="name" stroke="#fff" />
-            <YAxis stroke="#fff" />
+          <LineChart width={600} height={600} data={exerciseChartData}>
+            <XAxis dataKey="name" stroke="#000000" />
+            <YAxis stroke="#000000" />
             <CartesianGrid stroke="#555" strokeDasharray="5 5" />
             <Tooltip />
             <Legend />
-            <Line type="monotone" dataKey="exercises" stroke="#00ff00" fill="#00ff00" />
+            <Line type="monotone" dataKey="exercises" stroke="#00ff00" fill="white" />
           </LineChart>
         </Box>
-        <Box style={{ flex: 1, marginLeft: '1rem' }}>
-          <Typography variant="h4" style={{ color: '#fff', marginBottom: '1rem' }}>
+        <Box className="flex-1 ml-4">
+          <Typography variant="h5" style={{ color: 'white', marginBottom: '1rem' }}>
             <GiFire style={{ marginRight: '0.5rem' }} />
             Calories Burned per Exercise
           </Typography>
-          <BarChart width={500} height={300} data={calorieChartData}>
-            <XAxis dataKey="name" stroke="#fff" />
-            <YAxis stroke="#fff" />
+          <BarChart width={600} height={600} data={calorieChartData}>
+            <XAxis dataKey="name" stroke="#000000" />
+            <YAxis stroke="#000000" />
             <CartesianGrid stroke="#555" strokeDasharray="5 5" />
             <Tooltip />
             <Legend />
-            <Bar dataKey="calories" fill="#ff0000" />
+            <Bar dataKey="calories" fill="#eb1975" />
           </BarChart>
         </Box>
       </Box>
       <Box>
-        <Typography variant="h4" style={{ color: '#fff', marginTop: '2rem' }}>
-          <GiWeightLiftingUp style={{ marginRight: '0.5rem' }} />
+        <Typography variant="h4" className="text-white mt-8">
+          <GiWeightLiftingUp className="mr-2" />
           Total Exercises: {totalExercises}
         </Typography>
       </Box>

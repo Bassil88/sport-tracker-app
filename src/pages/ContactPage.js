@@ -24,7 +24,7 @@ const ContactPage = () => {
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">EMAIL</h2>
-              <a href="mailto:example@email.com" className="text-yellow-400 leading-relaxed">
+              <a href="mailto:example@email.com" className="text-sky-400 leading-relaxed">
                 example@email.com
               </a>
               <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">PHONE</h2>
@@ -67,7 +67,7 @@ const ContactPage = () => {
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             ></textarea>
           </div>
-          <button className="text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">
+          <button className="flex w-full justify-center rounded-md shadow-md shadow-sky-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
             Button
           </button>
           <p className="text-xs text-gray-400 text-opacity-90 mt-3">
