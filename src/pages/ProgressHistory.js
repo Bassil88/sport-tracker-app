@@ -14,6 +14,7 @@ const ProgressHistory = () => {
       try {
         const response = await fetch('https://wger.de/api/v2/exercise/');
         const data = await response.json();
+        console.log(data)
         setExerciseData(data.results);
       } catch (error) {
         console.error('Error fetching exercise data:', error);
@@ -24,6 +25,8 @@ const ProgressHistory = () => {
       try {
         const response = await fetch('https://wger.de/api/v2/exercisecategory/');
         const data = await response.json();
+        console.log(data)
+
         setExerciseCategoryData(data.results);
       } catch (error) {
         console.error('Error fetching exercise category data:', error);
@@ -34,18 +37,31 @@ const ProgressHistory = () => {
     getExerciseCategoryData();
   }, []);
 
+
+  // category name and the number of exercises in each category
+  // to prevent short-circuit or "undefined" i needed to use The question mark (?) which called "optional chaining operator"
+  // usage for to guard against accessing properties of potentially null or undefined values.
   const exerciseChartData = exerciseCategoryData?.map((category) => ({
     name: category.name,
     exercises: exerciseData.filter((exercise) => exercise.category === category.id).length,
   }));
 
-  const calorieChartData = workoutData.flatMap((category) =>
-    category.exercises.map((exercise) => ({
-      name: exercise.name,
-      calories: exercise.caloriesBurned || 0,
-    }))
-  );
+  // exercise name and the calories burned for each exercise
+  const calorieChartData = [];
 
+  for (const category of workoutData) {
+    for (const exercise of category.exercises) {
+      const data = {
+        name: exercise.name,
+        calories: exercise.caloriesBurned || 0,
+      };
+      
+      calorieChartData.push(data);
+    }
+  }
+  
+
+  // calculating based on its the length 
   const totalExercises = exerciseCategoryData?.length || 0;
 
   return (
@@ -59,7 +75,7 @@ const ProgressHistory = () => {
           <LineChart width={600} height={600} data={exerciseChartData}>
             <XAxis dataKey="name" stroke="yellow" />
             <YAxis stroke="yellow" />
-            <CartesianGrid stroke="#555" strokeDasharray="5 5" />
+            <CartesianGrid stroke="#555" strokeDasharray="3 1" />
             <Tooltip />
             <Legend />
             <Line type="monotone" dataKey="exercises" stroke="skyblue" fill="white" />
@@ -73,7 +89,7 @@ const ProgressHistory = () => {
           <BarChart width={600} height={600} data={calorieChartData}>
             <XAxis dataKey="name" stroke="lightyellow" />
             <YAxis stroke="limegreen" />
-            <CartesianGrid stroke="#555" strokeDasharray="5 5" />
+            <CartesianGrid stroke="#555" strokeDasharray="3 9" />
             <Tooltip />
             <Legend />
             <Bar dataKey="calories" fill="limegreen" />
