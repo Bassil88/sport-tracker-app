@@ -89,7 +89,7 @@ const ProgressHistory = () => {
           <BarChart width={600} height={600} data={calorieChartData}>
             <XAxis dataKey="name" stroke="lightyellow" />
             <YAxis stroke="limegreen" />
-            <CartesianGrid stroke="#555" strokeDasharray="3 9" />
+            <CartesianGrid stroke="#555" strokeDasharray="3 1" />
             <Tooltip />
             <Legend />
             <Bar dataKey="calories" fill="limegreen" />

@@ -8,7 +8,7 @@ const SignIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate authentication success
+
     if (email === 'example@example.com' && password === 'password') {
       alert('Authentication successful!');
       resetForm();
@@ -26,11 +26,7 @@ const SignIn = () => {
     setShowSignUp(!showSignUp);
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      resetForm();
-    }
-  };
+
 
   return (
     <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 ">

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Typography, Button, Table, TableHead, TableRow, TableCell, TableBody, TextField } from '@mui/material';
-import { PlayArrow as PlayArrowIcon, Pause as PauseIcon, Delete as DeleteIcon } from '@mui/icons-material';
+import { PlayArrow as PlayArrowIcon,  Delete as DeleteIcon, PauseCircleFilled as PauseCircleFilledIcon, RotateLeft as ResetIcon } from '@mui/icons-material';
 
 const WorkoutScheme = () => {
+
   const [exercises, setExercises] = useState([
     {
       id: 1,
@@ -19,8 +20,6 @@ const WorkoutScheme = () => {
 
   const [timer, setTimer] = useState(1800); // 30 minutes in seconds
   const [isTimerRunning, setIsTimerRunning] = useState(false);
-
-
 
   // Function to format the remaining time as MM:SS
   const formatTime = (time) => {
@@ -93,7 +92,6 @@ const WorkoutScheme = () => {
           isFinished: false,
         },
       ],
-      
     };
     setExercises([...exercises, newExercise]);
   };
@@ -101,6 +99,12 @@ const WorkoutScheme = () => {
   // Function to start/stop the timer
   const toggleTimer = () => {
     setIsTimerRunning(!isTimerRunning);
+  };
+
+  // Function to reset the timer
+  const resetTimer = () => {
+    setTimer(1800); // Reset timer to 30 minutes in seconds
+    setIsTimerRunning(false);
   };
 
   // Function to update the timer
@@ -114,25 +118,26 @@ const WorkoutScheme = () => {
     return () => clearInterval(intervalId);
   }, [isTimerRunning]);
 
-  
-  
   return (
-<Box
-  className="p-2 bg-gradient-to-tl from-sky-900 via-gray-900 bg-opacity-80 rounded-xl"
->
-  <Typography variant="h1" gutterBottom className="text-white">
-    Workout
-  </Typography>
+    <Box className="p-2 bg-gradient-to-tl from-sky-900 via-gray-900 bg-opacity-80 rounded-xl">
+      <Typography variant="h1" gutterBottom className="text-white">
+        Workout
+      </Typography>
 
-  <Box className="flex items-center justify-end mb-2">
-    <Button variant="contained" onClick={toggleTimer} className="text-white">
-      {isTimerRunning ? <PauseIcon /> : <PlayArrowIcon />}
-    </Button>
-    <Typography variant="h2" className="ml-2 text-white">
-      Timer: {formatTime(timer)}
-    </Typography>
-  </Box>
-
+      <Box className="flex items-center justify-end mb-2 m-12">
+        <Button variant="contained" onClick={toggleTimer} className="text-white">
+          {isTimerRunning ? <PauseCircleFilledIcon /> : <PlayArrowIcon />}
+        </Button>
+        <Typography
+          variant="h2"
+          className="ml-2 bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-100"
+        >
+          Timer: {formatTime(timer)}
+        </Typography>
+        <Button variant="contained" onClick={resetTimer} className="ml-2">
+          <ResetIcon />
+        </Button>
+      </Box>
   {exercises.map((exercise) => (
     <div key={exercise.id} className="mt-4">
       <Typography variant="h4" className="text-white">

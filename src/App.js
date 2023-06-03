@@ -8,7 +8,6 @@ import WorkoutScheme from './pages/WorkoutScheme';
 import Profile from './pages/Profile';
 import ContactPage from './pages/ContactPage';
 import ReviewsPage from './pages/ReviewsPage';
-import Footer from './pages/Footer';
 import Home from './pages/Home';
 
 
@@ -21,7 +20,6 @@ const App = () => {
           <Routes>
           <Route exact={true} path="/" element={<Home />} />
             <Route path="/progresshistory" element={<ProgressHistory />} >
-            <Route path="/progresshistory/footer" element={<Footer />} />
 
             </Route>
             <Route path="/SignIn" element={<SignIn />} />

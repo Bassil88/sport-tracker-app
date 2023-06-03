@@ -1,11 +1,10 @@
 import React from 'react';
 
 const Profile = () => {
-  // Fetch user data from local storage or any other source
+  // Fetching user data from an API later!!!!
   const userData = {
-    name: 'John Doe',
-    age: 30,
-    // Other user information
+    name: 'Bassil Edelbi',
+    age: 35,
   };
 
   return (
@@ -13,7 +12,6 @@ const Profile = () => {
       <h1>Profile</h1>
       <p>Name: {userData.name}</p>
       <p>Age: {userData.age}</p>
-      {/* Render other user information */}
     </div>
   );
 };

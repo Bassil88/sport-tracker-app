@@ -44,7 +44,8 @@ const ReviewPage = () => {
               />
               <p className="leading-relaxed">
                 Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
-              </p>
+                h-12
+h-12   </p>
               <span className="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
               <h2 className="text-white font-medium title-font tracking-wider text-sm">HENRY LETHAM</h2>
               <p className="text-gray-500">CTO</p>

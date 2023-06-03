@@ -6,7 +6,7 @@ const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
+
   };
 
   return (
