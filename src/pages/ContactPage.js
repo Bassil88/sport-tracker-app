@@ -24,8 +24,8 @@ const ContactPage = () => {
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">EMAIL</h2>
-              <a href="mailto:example@email.com" className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
-                example@email.com
+              <a href="mailto:bassiledelbi@email.com" className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
+              bassiledelbi@email.com
               </a>
               <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">PHONE</h2>
               <p className="leading-relaxed">123-456-7890</p>
