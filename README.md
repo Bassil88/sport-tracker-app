@@ -2,35 +2,25 @@
 
 
 
-This project my React application intended todo two features: 
-1. Tracking the **workout progress** with history visualized using **charts** **:)** 
+This React application has two main features:
+1. **Progress History:** It visualizes workout progress using **charts** **:)** 
 
-The Progress History component fetches exercise data from an API and visualizes it using charts. It utilizes the Recharts library to create two charts:
- - Exercise Category Chart: This chart shows the number of exercises in each exercise category. It uses the data fetched from the API to calculate the number of exercises in each category.
- - Calorie Chart: This chart displays the calories burned for each exercise. It uses pre-defined workout data to retrieve the exercise names and calories burned.
+2. **Workout Scheme:** It allows users to create and track workout schemes.
 
-The component also calculates the total number of exercise categories by checking the length of the exerciseCategoryData array.
+The Progress History component fetches exercise data from an API and uses the Recharts library to create two charts:
 
-2. **Workout Scheme** component which allows users to create and track workout schemes.
-The Workout Scheme component allows users to create and track workout schemes. It includes the following functionality:
+ - Exercise Category Chart: Shows the number of exercises in each category.
+ - Calorie Chart: Displays calories burned for each exercise.
 
- -  Managing Exercises: Users can add exercises to the scheme, remove exercises, and add sets to exercises.
- -  Managing Sets: Each exercise can have multiple sets. Users can update the weight and reps of each set, remove sets, and toggle the finished status.
- - Workout Timer: The component includes a workout timer that counts down from 30 minutes (1800 seconds). Users can start and stop the timer, and there is a reset button to set the timer back to 30 minutes.
+The Workout Scheme component enables users to manage exercises, sets, and includes a workout timer.
 
- The component includes helper functions to handle various actions such as adding sets, updating weights and reps, removing sets, toggling finished status, and managing the timer.
+ # Dependencies:
 
- 
- 
- ### Conclusion
- This React Progress History and Workout Scheme project provides a comprehensive application for tracking exercise progress and creating workout schemes. It demonstrates the usage of React, fetching data from an API, creating charts with the Recharts library, and managing state with hooks. 
+ - React
+ - @mui/material
+ - Recharts
+ - react-icons
 
-   ## Dependencies
+**Styling:** This project utilizes the Tailwind CSS framework for styling the application.
 
-
-This project relies on the following dependencies:
-
- - React: A JavaScript library for building user interfaces.
- - @mui/material: Material-UI components for styling the application.
- - Recharts: A composable charting library built on React components.
- - react-icons: A collection of icons for React applications.
+This project showcases React usage, API data fetching, chart creation with Recharts, and state management with hooks.
