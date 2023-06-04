@@ -1,124 +1,144 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Typography, Button, Table, TableHead, TableRow, TableCell, TableBody, TextField } from '@mui/material';
-import { PlayArrow as PlayArrowIcon,  Delete as DeleteIcon, PauseCircleFilled as PauseCircleFilledIcon, RotateLeft as ResetIcon } from '@mui/icons-material';
+import {Delete as DeleteIcon, PlayArrowTwoTone, PauseOutlined, RestoreRounded } from '@mui/icons-material';
 
 const WorkoutScheme = () => {
 
-  const [exercises, setExercises] = useState([
-    {
-      id: 1,
-      sets: [
-        {
-          id: 1,
-          weight: '',
-          reps: '',
-          isFinished: false,
-        },
-      ],
-    },
-  ]);
+/*   const initState = {
+    id: 1,
+    sets: [
+      {
+        id: 1,
+        weight: '',
+        reps: '',
+        isFinished: false,
+      },
+    ],
+  } */
+  const [exercises, setExercises] = useState([]);
+ 
+  useEffect(() => {
+    const storedExercises = localStorage.getItem('exercises');
+    if (storedExercises) {
+      setExercises(JSON.parse(storedExercises));
+    }
+  }, []);
 
-  const [timer, setTimer] = useState(1800); // 30 minutes in seconds
+  // Save exercises to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('exercises', JSON.stringify(exercises));
+  }, [exercises]);
 
-  const [isTimerRunning, setIsTimerRunning] = useState(false);
+    // to add a new exercise
+    const addExercise = () => {
+      const newExercise = {
+        id: exercises.length + 1,
+        sets: [
+          {
+            id: 1,
+            weight: '',
+            reps: '',
+            isFinished: false,
+          },
+        ],
+      };
+      setExercises([...exercises, newExercise]);
+    };
 
-  // to format the remaining time as MM:SS
-  const formatTime = (time) => {
-    const minutes = Math.floor(time / 60);
-    const seconds = time % 60;
-    const formattedMinutes = String(minutes).padStart(2, '0');
-    const formattedSeconds = String(seconds).padStart(2, '0');
-    return `${formattedMinutes}:${formattedSeconds}`;
-  };
 
-  // to remove an exercise with filter
-  const removeExercise = (exerciseId) => {
-    const updatedExercises = exercises.filter((exercise) => exercise.id !== exerciseId);
-    setExercises(updatedExercises);
-  };
+     // to remove an exercise with filter
+    const removeExercise = (exerciseId) => {
+      const updatedExercises = exercises.filter((exercise) => exercise.id !== exerciseId);
+      setExercises(updatedExercises);
+    };
 
   // to add a new set to an exercise
-  const addSet = (exerciseId) => {
-    const newSet = {
-      id: exercises[exerciseId - 1].sets.length + 1,
-      weight: '',
-      reps: '',
-      isFinished: false,
+    const addSet = (exerciseId) => {
+      const newSet = {
+        id: exercises[exerciseId - 1].sets.length + 1,
+        weight: '',
+        reps: '',
+        isFinished: false,
+      };
+
+      const updatedExercises = [...exercises];
+      updatedExercises[exerciseId - 1].sets.push(newSet);
+      setExercises(updatedExercises);
     };
-    const updatedExercises = [...exercises];
-    updatedExercises[exerciseId - 1].sets.push(newSet);
-    setExercises(updatedExercises);
-  };
 
   // to update the weight of a set
-  const updateWeight = (exerciseId, setId, newWeight) => {
-    const updatedExercises = [...exercises];
-    updatedExercises[exerciseId - 1].sets[setId - 1].weight = newWeight;
-    setExercises(updatedExercises);
-  };
+    const updateWeight = (exerciseId, setId, newWeight) => {
+      const updatedExercises = [...exercises];
+      updatedExercises[exerciseId - 1].sets[setId - 1].weight = newWeight;
+      setExercises(updatedExercises);
+    };
 
   // to update the reps of a set
-  const updateReps = (exerciseId, setId, newReps) => {
-    const updatedExercises = [...exercises];
-    updatedExercises[exerciseId - 1].sets[setId - 1].reps = newReps;
-    setExercises(updatedExercises);
-  };
-
-  // to remove a set from an exercise
-  const removeSet = (exerciseId, setId) => {
-    const updatedExercises = [...exercises];
-    updatedExercises[exerciseId - 1].sets = updatedExercises[exerciseId - 1].sets.filter(
-      (set) => set.id !== setId
-    );
-    setExercises(updatedExercises);
-  };
-
-  // to toggle the finished status of a set
-  const toggleFinished = (exerciseId, setId) => {
-    const updatedExercises = [...exercises];
-    const currentStatus = updatedExercises[exerciseId - 1].sets[setId - 1].isFinished;
-    updatedExercises[exerciseId - 1].sets[setId - 1].isFinished = !currentStatus;
-    setExercises(updatedExercises);
-  };
-
-  // to add a new exercise
-  const addExercise = () => {
-    const newExercise = {
-      id: exercises.length + 1,
-      sets: [
-        {
-          id: 1,
-          weight: '',
-          reps: '',
-          isFinished: false,
-        },
-      ],
+    const updateReps = (exerciseId, setId, newReps) => {
+      const updatedExercises = [...exercises];
+      updatedExercises[exerciseId - 1].sets[setId - 1].reps = newReps;
+      setExercises(updatedExercises);
     };
-    setExercises([...exercises, newExercise]);
-  };
 
-  // to start/stop the timer
-  const toggleTimer = () => {
-    setIsTimerRunning(!isTimerRunning);
-  };
+    // to remove a set from an exercise
+    const removeSet = (exerciseId, setId) => {
+      const updatedExercises = [...exercises];
+      updatedExercises[exerciseId - 1].sets = updatedExercises[exerciseId - 1].sets.filter(
+        (set) => set.id !== setId
+      );
+      setExercises(updatedExercises);
+    };
 
-  // to reset the timer
-  const resetTimer = () => {
-    setTimer(1800); // Reset timer to 30 minutes in seconds
-    setIsTimerRunning(false);
-  };
+    // to toggle the finished status of a set
+    const toggleFinished = (exerciseId, setId) => {
+      const updatedExercises = [...exercises];
+      const currentStatus = updatedExercises[exerciseId - 1].sets[setId - 1].isFinished;
+      updatedExercises[exerciseId - 1].sets[setId - 1].isFinished = !currentStatus;
+      setExercises(updatedExercises);
+    };
 
-  // to update the timer
-  useEffect(() => {
-    let intervalId;
-    if (isTimerRunning) {
-      intervalId = setInterval(() => {
-        setTimer((prevTimer) => prevTimer - 1);
-      }, 1000);
-    }
-    return () => clearInterval(intervalId);
-  }, [isTimerRunning]);
 
+    /*-------------Timer SECTION----------------------------------  */
+    const [timer, setTimer] = useState(1800); // 30 minutes in seconds
+    
+    // to format the remaining time as MM:SS
+    const formatTime = (time) => {
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      const formattedMinutes = String(minutes).padStart(2, '0');
+      const formattedSeconds = String(seconds).padStart(2, '0');
+      
+      return `${formattedMinutes}:${formattedSeconds}`;
+    };
+
+
+    const [isTimerRunning, setIsTimerRunning] = useState(false);
+
+    // to update the timer
+    useEffect(() => {
+      let intervalSetter;
+      if (isTimerRunning) {
+        intervalSetter = setInterval(() => {
+          setTimer((prevTimer) => prevTimer - 1);
+        }, 1000);
+      }
+      return () => clearInterval(intervalSetter);
+    }, [isTimerRunning]);
+    
+    
+    
+    // to start/stop the timer
+    const toggleTimer = () => {
+      setIsTimerRunning(!isTimerRunning);
+    };
+
+
+    // to reset the timer
+    const resetTimer = () => {
+      setTimer(1800); // Reset timer to 30 minutes in seconds
+      setIsTimerRunning(false);
+    };
+ 
   return (
     <Box className="p-2 m-4 bg-gradient-to-tl from-sky-900 via-gray-900 bg-opacity-80 rounded-xl">
       <Typography variant="h1" gutterBottom className="text-white">
@@ -127,10 +147,10 @@ const WorkoutScheme = () => {
 
       <Box className="flex items-center justify-end mb-2 m-12">
         <Button style={{margin:'0.5rem', padding:'2rem'}} variant="contained" onClick={toggleTimer} >
-          {isTimerRunning ? <PauseCircleFilledIcon /> : <PlayArrowIcon />}
+          {isTimerRunning ? <PauseOutlined /> : <PlayArrowTwoTone />}
         </Button>
-        <Button variant="contained" style={{marginRight:'2rem', padding:'1.5rem'}} onClick={resetTimer} >
-          <ResetIcon />
+        <Button variant="outlined" style={{marginRight:'2rem', padding:'1.5rem'}} onClick={resetTimer} >
+          <RestoreRounded />
         </Button>
         <Typography
           variant="h2"
