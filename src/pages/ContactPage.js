@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactPage = () => {
   return (
-    <section className="text-gray-400 bg-gradient-to-b from-sky-900  via-gray-900 bg-opacity-80 rounded-xl body-font relative">
+    <section className="m-4 text-gray-400 bg-gradient-to-b from-sky-900  via-gray-900 bg-opacity-80 rounded-xl body-font relative">
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe

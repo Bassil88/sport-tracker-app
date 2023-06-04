@@ -19,9 +19,10 @@ const WorkoutScheme = () => {
   ]);
 
   const [timer, setTimer] = useState(1800); // 30 minutes in seconds
+
   const [isTimerRunning, setIsTimerRunning] = useState(false);
 
-  // Function to format the remaining time as MM:SS
+  // to format the remaining time as MM:SS
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
@@ -30,13 +31,13 @@ const WorkoutScheme = () => {
     return `${formattedMinutes}:${formattedSeconds}`;
   };
 
-  // Function to remove an exercise
+  // to remove an exercise with filter
   const removeExercise = (exerciseId) => {
     const updatedExercises = exercises.filter((exercise) => exercise.id !== exerciseId);
     setExercises(updatedExercises);
   };
 
-  // Function to add a new set to an exercise
+  // to add a new set to an exercise
   const addSet = (exerciseId) => {
     const newSet = {
       id: exercises[exerciseId - 1].sets.length + 1,
@@ -49,21 +50,21 @@ const WorkoutScheme = () => {
     setExercises(updatedExercises);
   };
 
-  // Function to update the weight of a set
+  // to update the weight of a set
   const updateWeight = (exerciseId, setId, newWeight) => {
     const updatedExercises = [...exercises];
     updatedExercises[exerciseId - 1].sets[setId - 1].weight = newWeight;
     setExercises(updatedExercises);
   };
 
-  // Function to update the reps of a set
+  // to update the reps of a set
   const updateReps = (exerciseId, setId, newReps) => {
     const updatedExercises = [...exercises];
     updatedExercises[exerciseId - 1].sets[setId - 1].reps = newReps;
     setExercises(updatedExercises);
   };
 
-  // Function to remove a set from an exercise
+  // to remove a set from an exercise
   const removeSet = (exerciseId, setId) => {
     const updatedExercises = [...exercises];
     updatedExercises[exerciseId - 1].sets = updatedExercises[exerciseId - 1].sets.filter(
@@ -72,7 +73,7 @@ const WorkoutScheme = () => {
     setExercises(updatedExercises);
   };
 
-  // Function to toggle the finished status of a set
+  // to toggle the finished status of a set
   const toggleFinished = (exerciseId, setId) => {
     const updatedExercises = [...exercises];
     const currentStatus = updatedExercises[exerciseId - 1].sets[setId - 1].isFinished;
@@ -80,7 +81,7 @@ const WorkoutScheme = () => {
     setExercises(updatedExercises);
   };
 
-  // Function to add a new exercise
+  // to add a new exercise
   const addExercise = () => {
     const newExercise = {
       id: exercises.length + 1,
@@ -96,18 +97,18 @@ const WorkoutScheme = () => {
     setExercises([...exercises, newExercise]);
   };
 
-  // Function to start/stop the timer
+  // to start/stop the timer
   const toggleTimer = () => {
     setIsTimerRunning(!isTimerRunning);
   };
 
-  // Function to reset the timer
+  // to reset the timer
   const resetTimer = () => {
     setTimer(1800); // Reset timer to 30 minutes in seconds
     setIsTimerRunning(false);
   };
 
-  // Function to update the timer
+  // to update the timer
   useEffect(() => {
     let intervalId;
     if (isTimerRunning) {
@@ -119,14 +120,17 @@ const WorkoutScheme = () => {
   }, [isTimerRunning]);
 
   return (
-    <Box className="p-2 bg-gradient-to-tl from-sky-900 via-gray-900 bg-opacity-80 rounded-xl">
+    <Box className="p-2 m-4 bg-gradient-to-tl from-sky-900 via-gray-900 bg-opacity-80 rounded-xl">
       <Typography variant="h1" gutterBottom className="text-white">
         Workout
       </Typography>
 
       <Box className="flex items-center justify-end mb-2 m-12">
-        <Button variant="contained" onClick={toggleTimer} className="text-white">
+        <Button style={{margin:'0.5rem', padding:'2rem'}} variant="contained" onClick={toggleTimer} >
           {isTimerRunning ? <PauseCircleFilledIcon /> : <PlayArrowIcon />}
+        </Button>
+        <Button variant="contained" style={{marginRight:'2rem', padding:'1.5rem'}} onClick={resetTimer} >
+          <ResetIcon />
         </Button>
         <Typography
           variant="h2"
@@ -134,9 +138,6 @@ const WorkoutScheme = () => {
         >
           Timer: {formatTime(timer)}
         </Typography>
-        <Button variant="contained" onClick={resetTimer} className="ml-2">
-          <ResetIcon />
-        </Button>
       </Box>
   {exercises.map((exercise) => (
     <div key={exercise.id} className="mt-4">
@@ -178,7 +179,7 @@ const WorkoutScheme = () => {
               <TableCell style={{ color: 'white' }}>{set.id}</TableCell>
               <TableCell>
                 <TextField
-                  type="number"
+                  type="text"
                   value={set.weight}
                   onChange={(e) => updateWeight(exercise.id, set.id, e.target.value)}
                   InputProps={{ style: { color: 'red' } }}
@@ -187,7 +188,7 @@ const WorkoutScheme = () => {
               </TableCell>
               <TableCell>
                 <TextField
-                  type="number"
+                  type="text"
                   value={set.reps}
                   onChange={(e) => updateReps(exercise.id, set.id, e.target.value)}
                   InputProps={{ style: { color: 'red' } }}
@@ -209,7 +210,7 @@ const WorkoutScheme = () => {
                   variant="contained"
                   color={set.isFinished ? 'primary' : 'secondary'}
                   onClick={() => toggleFinished(exercise.id, set.id)}
-                  className={`bg-${set.isFinished ? 'sky-500' : 'teal-500'} rounded-md`}
+                  className={`bg-${set.isFinished ? 'sky-500' : 'teal-500'} rounded-lg`}
                 >
                   {set.isFinished ? 'Mark as Unfinished' : 'Mark as Finished'}
                 </Button>
