@@ -1,5 +1,6 @@
    # React Progress History and Workout Scheme Project
 
+The project is deployed and can be accessed [here](https://workout-tracker-react-app.netlify.app).
 
 
 This React application has two main features:
