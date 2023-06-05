@@ -48,7 +48,8 @@ const WorkoutScheme = () => {
 
      // to remove an exercise with filter
     const removeExercise = (exerciseId) => {
-      const updatedExercises = exercises.filter((exercise) => exercise.id !== exerciseId);
+      const updatedExercises = 
+      exercises.filter((exercise) => exercise.id !== exerciseId);
       setExercises(updatedExercises);
     };
 
@@ -154,8 +155,7 @@ const WorkoutScheme = () => {
         </Button>
         <Typography
           variant="h2"
-          className="ml-2 bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-100"
-        >
+          className="ml-2 bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-100">
           Timer: {formatTime(timer)}
         </Typography>
       </Box>
@@ -170,16 +170,14 @@ const WorkoutScheme = () => {
           variant="contained"
           color="secondary"
           onClick={() => removeExercise(exercise.id)}
-          className="mt-2"
-        >
+          className="mt-2">
           Remove Exercise
         </Button>
         <Button
           variant="contained"
           color="primary"
           onClick={() => addSet(exercise.id)}
-          className="mt-2"
-        >
+          className="mt-2">
           Add Set
         </Button>
       </div>
@@ -203,8 +201,7 @@ const WorkoutScheme = () => {
                   value={set.weight}
                   onChange={(e) => updateWeight(exercise.id, set.id, e.target.value)}
                   InputProps={{ style: { color: 'red' } }}
-                  className="bg-white rounded-md"
-                />
+                  className="bg-white rounded-md"/>
               </TableCell>
               <TableCell>
                 <TextField
@@ -212,8 +209,7 @@ const WorkoutScheme = () => {
                   value={set.reps}
                   onChange={(e) => updateReps(exercise.id, set.id, e.target.value)}
                   InputProps={{ style: { color: 'red' } }}
-                  className="bg-white rounded-md"
-                />
+                  className="bg-white rounded-md"/>
               </TableCell>
               <TableCell className="">
               <div className="space-x-2">
@@ -222,16 +218,14 @@ const WorkoutScheme = () => {
                   color="secondary"
                   startIcon={<DeleteIcon />}
                   onClick={() => removeSet(exercise.id, set.id)}
-                  className=""
-                >
+                  className="">
                   Remove Set
                 </Button>
                 <Button
                   variant="contained"
                   color={set.isFinished ? 'primary' : 'secondary'}
                   onClick={() => toggleFinished(exercise.id, set.id)}
-                  className={`bg-${set.isFinished ? 'sky-500' : 'teal-500'} rounded-lg`}
-                >
+                  className={`bg-${set.isFinished ? 'sky-500' : 'teal-500'} rounded-lg`}>
                   {set.isFinished ? 'Mark as Unfinished' : 'Mark as Finished'}
                 </Button>
               </div>
