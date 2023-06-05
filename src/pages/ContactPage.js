@@ -5,15 +5,13 @@ const ContactPage = () => {
     <section className="m-4 text-gray-400 bg-gradient-to-b from-sky-900  via-gray-900 bg-opacity-80 rounded-xl body-font relative">
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+        {/* -----------Google Map section---------------------------- */}
           <iframe
             width="100%"
             height="100%"
             title="map"
             className="absolute inset-0"
-            frameBorder="0"
-            marginHeight="0"
-            marginWidth="0"
-            scrolling="no"
+
             src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
             style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.16)' }}
           ></iframe>
@@ -61,12 +59,15 @@ const ContactPage = () => {
             <label htmlFor="message" className="leading-7 text-sm bg-clip-text text-transparent bg-gradient-to-l from-green-400 via-pink-500 to-purple-500 ">
               Message
             </label>
+
             <textarea
               id="message"
               name="message"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-            ></textarea>
+              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out">
+
+              </textarea>
           </div>
+          
           <button className="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out">
             Button
           </button>
