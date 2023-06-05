@@ -22,6 +22,6 @@ The Workout Scheme component enables users to manage exercises, sets, and includ
  - Recharts
  - react-icons
 
-**Styling:** This project utilizes the Tailwind CSS framework for styling the application.
+**Styling:** This project utilizes the **Tailwind CSS** framework for styling the application.
 
 This project showcases React usage, API data fetching, chart creation with Recharts, and state management with hooks.
