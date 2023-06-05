@@ -10,8 +10,7 @@ const ReviewPage = () => {
               <img
                 alt="testimonial"
                 className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10"
-                src="https://img.freepik.com/premium-photo/young-asian-woman-isolated-chroma-key-background-making-gesture-being-late_1368-466915.jpg?w=2000"
-              />
+                src="https://img.freepik.com/premium-photo/young-asian-woman-isolated-chroma-key-background-making-gesture-being-late_1368-466915.jpg?w=2000"/>
               <p className="leading-relaxed">
                 Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
               </p>
@@ -25,8 +24,7 @@ const ReviewPage = () => {
               <img
                 alt="testimonial"
                 className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10"
-                src="https://img.freepik.com/premium-photo/showing-thumbs-up-thumbs-down-difficult-choose-concept_1187-379396.jpg"
-              />
+                src="https://img.freepik.com/premium-photo/showing-thumbs-up-thumbs-down-difficult-choose-concept_1187-379396.jpg"/>
               <p className="leading-relaxed">
                 Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
               </p>
@@ -40,8 +38,7 @@ const ReviewPage = () => {
               <img
                 alt="testimonial"
                 className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10"
-                src="https://img.freepik.com/free-photo/cheerful-young-woman-yellow-sweater-points-aside-copy-space-shows-cool-advertisement-against-blue-background_273609-34291.jpg?w=360"
-              />
+                src="https://img.freepik.com/free-photo/cheerful-young-woman-yellow-sweater-points-aside-copy-space-shows-cool-advertisement-against-blue-background_273609-34291.jpg?w=360"/>
               <p className="leading-relaxed">
                 Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
                 h-12
