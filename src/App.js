@@ -19,9 +19,7 @@ const App = () => {
         <div className="flex-1">
           <Routes>
           <Route exact={true} path="/" element={<Home />} />
-            <Route path="/progresshistory" element={<ProgressHistory />} >
-
-            </Route>
+            <Route path="/progresshistory" element={<ProgressHistory />} />
             <Route path="/SignIn" element={<SignIn />} />
             <Route path="/workoutscheme" element={<WorkoutScheme />} />
             <Route path="/profile" element={<Profile />} />
