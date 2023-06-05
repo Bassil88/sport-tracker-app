@@ -10,9 +10,7 @@ const Sidebar = () => {
         <li className="py-4 flex">
             <NavLink
               to="/"
-              className="text-green-100 text-lg hover:text-sky-500"
-              activeclassname="font-bold"
-            >
+              className="text-green-100 text-lg hover:text-sky-500 font-bold">
               Home
             </NavLink>
           </li>
@@ -20,27 +18,21 @@ const Sidebar = () => {
           <li className="py-4 flex">
             <NavLink
               to="/progresshistory"
-              className="text-green-100 text-lg hover:text-sky-500"
-              activeclassname="font-bold"
-            >
+              className="text-green-100 text-lg hover:text-sky-500 font-bold">
               Progress History
             </NavLink>
           </li>
           <li className="py-4 flex">
             <NavLink
               to="/signin"
-              className="text-green-100 text-lg hover:text-sky-500"
-              activeclassname="font-bold"
-            >
+              className="text-green-100 text-lg hover:text-sky-500 font-bold">
               Sign In
             </NavLink>
           </li>
           <li className="py-4 flex">
             <NavLink
               to="/workoutscheme"
-              className="text-green-100 text-lg hover:text-sky-500"
-              activeclassname="font-bold"
-            >
+              className="text-green-100 text-lg hover:text-sky-500 font-bold">
               Workout Scheme
             </NavLink>
           </li>
@@ -49,9 +41,7 @@ const Sidebar = () => {
             <NavLink
               
               to="/ReviewsPage"
-              className="text-green-100 text-lg hover:text-sky-500"
-              activeclassname="font-bold"
-            >
+              className="text-green-100 text-lg hover:text-sky-500 font-bold">
               Reviews
             </NavLink>
           </li>
@@ -59,9 +49,7 @@ const Sidebar = () => {
           <li className="py-4 flex">
             <NavLink
               to="/ContactPage"
-              className="text-green-100 text-lg hover:text-sky-500"
-              activeclassname="font-bold"
-            >
+              className="text-green-100 text-lg hover:text-sky-500 font-bold">
               Contact us
             </NavLink>
           </li>
