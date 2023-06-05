@@ -8,7 +8,7 @@ const SignIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+// needs to be connected with server for verification later on↓↓↓↓↓↓
     if (email === 'example@example.com' && password === 'password') {
       alert('Authentication successful!');
       resetForm();
@@ -17,11 +17,13 @@ const SignIn = () => {
     }
   };
 
+  // to Rest the form
   const resetForm = () => {
     setEmail('');
     setPassword('');
   };
 
+  // switch to SingUp Form
   const handleToggleSignUp = () => {
     setShowSignUp(!showSignUp);
   };
@@ -47,8 +49,7 @@ const SignIn = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-100 sm:text-sm sm:leading-6 bg-sky-100 bg-opacity-30 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                />
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-100 sm:text-sm sm:leading-6 bg-sky-100 bg-opacity-30 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"/>
               </div>
             </div>
 
@@ -63,16 +64,14 @@ const SignIn = () => {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-100 sm:text-sm sm:leading-6 bg-sky-100 bg-opacity-30 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                />
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-100 sm:text-sm sm:leading-6 bg-sky-100 bg-opacity-30 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"/>
               </div>
             </div>
 
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-sky-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-opacity-30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
+                className="flex w-full justify-center rounded-md bg-sky-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-opacity-30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                 Sign In
               </button>
             </div>
@@ -82,8 +81,7 @@ const SignIn = () => {
             <p>Don't have an account?</p>
             <button
               onClick={handleToggleSignUp}
-              className="font-semibold leading-6 text-yellow-700 hover:text-3xl text-white"
-            >
+              className="font-semibold leading-6 text-yellow-700 hover:text-3xl text-white">
               Sign Up
             </button>
           </div>
