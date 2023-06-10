@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className="bg-gradient-to-r from-black via-gray-900 bg-opacity-80 h-screen w-0.5/5 p-4 shadow-xl shadow-sky-500">
-      <nav>
-        <ul>
+    <div className="bg-gradient-to-r from-black via-gray-900 bg-opacity-80 h-screen w-0.5/5 p-4 shadow-xl shadow-sky-500 min-h-screen flex">
+      <nav className="w-0.5/5 p-4 shadow-xl">
+        <ul className="flex flex-col">
 
         <li className="py-4 flex">
             <NavLink
