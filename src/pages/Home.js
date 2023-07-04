@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-<div className="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed header-background">
+<div className="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed header-background ">
   <div className="h-full">
         {/* -----------------------HEADER Section ------------------------- */}
 
