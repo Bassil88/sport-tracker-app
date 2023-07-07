@@ -67,9 +67,9 @@ const ProgressHistory = () => {
   return (
     <Box className="bg-transparent p-4 flex flex-col items-center justify-center ">
 
-      <Box className="flex-wrap flex justify-between mb-4 bg-gradient-to-tl from-sky-900 via-gray-900 bg-opacity-80 rounded-xl">
+      <Box className="flex-wrap flex justify-center mb-4 bg-gradient-to-tl from-sky-900 via-gray-900 bg-opacity-80 rounded-xl">
 
-        <Box className="flex-1 m-4 ">
+        <Box className=" m-4 ">
         
           <Typography variant="h5" style={{ color: 'deepPink', fontWeight:'bolder' }} >
             <FaDumbbell className=" m-4 "/>
@@ -86,7 +86,7 @@ const ProgressHistory = () => {
           </LineChart>
         </Box>
 
-        <Box className=" ml-9 flex-1 ">
+        <Box className=" m-9  ">
           <Typography variant="h5" style={{ color: 'deepPink', marginBottom: '1rem' , fontWeight:'bolder'}}>
             <GiFire className="m-4 "/>
             Calories Burned per Exercise
