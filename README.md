@@ -1,27 +1,152 @@
-   # React Progress History and Workout Scheme Project
+# 💪 Sport Tracker Application
 
-The project is deployed and can be accessed  [here](https://workout-tracker-react-app.netlify.app).
+A modern fitness tracking application built with **React**, **React Router**, **Material UI**, **Tailwind CSS**, and **Chart.js**.
 
+The project demonstrates responsive frontend development, component-based architecture, workout management, progress visualization, and interactive dashboards.
 
-This React application has two main features:
-1. **Progress History:** It visualizes workout progress using **charts** **:)** 
+---
 
-2. **Workout Scheme:** It allows users to create and track workout schemes.
+## 🚀 Live Demo
 
-The Progress History component fetches exercise data from an API and uses the Recharts library to create two charts:
+https://workout-tracker-react-app.netlify.app/
 
- - Exercise Category Chart: Shows the number of exercises in each category.
- - Calorie Chart: Displays calories burned for each exercise.
+---
 
-The Workout Scheme component enables users to manage exercises, sets, and includes a workout timer.
+## ✨ Features
 
- # Dependencies:
+* Workout management
+* Progress tracking
+* Interactive charts and statistics
+* Responsive user interface
+* Authentication pages
+* Profile management
+* Workout plans
+* Dashboard navigation
+* Modern Material UI components
 
- - React
- - @mui/material
- - Recharts
- - react-icons
+---
 
-**Styling:** This project utilizes the **Tailwind CSS** framework for styling the application.
+## 🛠️ Tech Stack
 
-This project showcases React usage, API data fetching, chart creation with Recharts, and state management with hooks.
+### Frontend
+
+* React 18
+* React Router v6
+* JavaScript (ES6+)
+* Material UI
+* Tailwind CSS
+
+### Data Visualization
+
+* Chart.js
+* React ChartJS 2
+* Recharts
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+ ├── components/
+ │    └── Sidebar.js
+ │
+ ├── pages/
+ │    ├── Home.js
+ │    ├── WorkoutScheme.js
+ │    ├── ProgressHistory.js
+ │    ├── Profile.js
+ │    ├── ContactPage.js
+ │    ├── ReviewsPage.js
+ │    ├── SignIn.js
+ │    └── SignUp.js
+ │
+ ├── WorkoutData.js
+ ├── App.js
+ └── index.js
+```
+
+---
+
+## 📸 Screenshots
+
+*Add screenshots of:*
+
+* Dashboard
+* Workout planner
+* Progress charts
+* Mobile layout
+
+---
+
+## ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Bassil88/sport-tracker-app.git
+```
+
+Navigate into the project
+
+```bash
+cd sport-tracker-app
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the application
+
+```bash
+npm start
+```
+
+---
+
+## 🎯 Purpose
+
+This project was created to strengthen practical frontend development skills while building a realistic fitness management application.
+
+The focus was on:
+
+* React component architecture
+* Client-side routing
+* Responsive UI
+* Data visualization
+* Dashboard design
+* Modern frontend development practices
+
+---
+
+## 📚 What I Learned
+
+During this project I improved my understanding of:
+
+* React Router
+* Component communication
+* Material UI
+* Chart.js integration
+* Responsive layouts
+* Dashboard development
+* Reusable UI components
+
+---
+
+## 👨‍💻 Author
+
+**Bassil Edelbi**
+
+Frontend Software Developer
+
+🌐 Portfolio
+https://bassil-edelbi.netlify.app
+
+💼 LinkedIn
+https://www.linkedin.com/in/b-dev/
+
+🐙 GitHub
+https://github.com/Bassil88
