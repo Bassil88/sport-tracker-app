@@ -43,6 +43,15 @@ Use ChatGPT for:
 - Documentation
 - Complex reasoning
 
+
+## Audit Rules
+
+AI may identify potential technical debt.
+
+Potential findings must never be treated as confirmed issues.
+
+Every finding requires manual verification before adding it to the backlog.
+
 # Current Milestone
 
 Milestone: M1
