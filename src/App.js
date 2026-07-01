@@ -1,35 +1,36 @@
 import React from 'react';
 import './index.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/navigationItems/Sidebar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Sidebar from './components/navigationItems/Sidebar';
+
+import Home from './pages/Home';
 import ProgressHistory from './pages/ProgressHistory';
-import SignIn from './pages/SignIn';
 import WorkoutScheme from './pages/WorkoutScheme';
+import SignIn from './pages/SignIn';
 import Profile from './pages/Profile';
 import ContactPage from './pages/ContactPage';
 import ReviewsPage from './pages/ReviewsPage';
-import Home from './pages/Home';
-
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="flex">
-        <Header />
-        <div className="flex-1">
+        <Sidebar />
+
+        <main className="flex-1">
           <Routes>
-          <Route exact={true} path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/progresshistory" element={<ProgressHistory />} />
-            <Route path="/SignIn" element={<SignIn />} />
+            <Route path="/signin" element={<SignIn />} />
             <Route path="/workoutscheme" element={<WorkoutScheme />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/contactpage" element={<ContactPage />} />
             <Route path="/reviewspage" element={<ReviewsPage />} />
           </Routes>
-
-        </div>
+        </main>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };
 
