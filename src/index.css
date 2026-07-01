@@ -9,7 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('~images/header.png'); /* Adjust the path to the header.png file */
+  background-image: url('~assets/header.png'); /* Adjust the path to the header.png file */
   background-repeat: no-repeat;
   background-size: cover;
 }
