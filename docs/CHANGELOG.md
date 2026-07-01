@@ -2,30 +2,45 @@
 
 All notable changes to this project will be documented in this file.
 
+This project follows a simple chronological changelog.
+
 ---
 
 ## [Unreleased]
 
+### Planned
+
+- Continue Phase 1 project audit
+- Audit authentication flow
+- Refactor WorkoutScheme component
+- Begin service layer extraction
+
+---
+
+## [1.0.0] - 2026-06-29
+
 ### Added
 
-- Professional project documentation system.
-- Project roadmap and milestone tracking.
-- Product backlog.
-- Technical audit report.
-- AI collaboration guidelines.
-- Project development standards.
+- Professional documentation system
+- Project roadmap
+- Product backlog
+- Architecture documentation
+- AI collaboration guidelines
+- Development standards
+- Audit report
 
 ### Changed
 
-- Refactored `ProgressHistory.js` for improved readability and maintainability.
-- Refactored `WorkoutScheme.js` by extracting constants and improving code organization.
-- Improved `SignIn.js` naming consistency and prepared the component for JWT authentication.
-- Improved `SignUp.js` structure and prepared the registration flow for future API integration.
-- Improved `Home.js` by preparing the newsletter form for backend integration.
-- Updated project documentation to reflect the completed Phase 1 audit.
+- Refactored `ProgressHistory.js`
+- Improved code readability
+- Extracted reusable styling
+- Renamed variables for clarity
+- Removed development console logging
 
 ### Documentation
 
-- Completed **Milestone M0 – Documentation Foundation**.
-- Completed **Milestone M1 – Project Audit**.
-- Synchronized project documentation with the current implementation.
+- Added Phase documentation
+- Added ADR folder
+- Added templates
+- Added AI context
+- Added project governance documents
