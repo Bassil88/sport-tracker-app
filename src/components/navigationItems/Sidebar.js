@@ -1,16 +1,20 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
+
+  const navLinkStyle =
+  "text-green-100 text-lg font-bold hover:text-sky-500";
+
   return (
     <div className="bg-gradient-to-r from-black via-gray-900 bg-opacity-80 w-0.5/5 p-4 shadow-xl shadow-sky-500 min-h-screen flex">
       <nav className="w-0.5/5 p-4 shadow-xl">
         <ul className="flex flex-col">
-
-        <li className="py-4 flex">
+          <li className="py-4 flex">
             <NavLink
               to="/"
-              className="text-green-100 text-lg hover:text-sky-500 font-bold">
+              className={navLinkStyle}
+            >
               Home
             </NavLink>
           </li>
@@ -18,42 +22,45 @@ const Sidebar = () => {
           <li className="py-4 flex">
             <NavLink
               to="/progresshistory"
-              className="text-green-100 text-lg hover:text-sky-500 font-bold">
+              className={navLinkStyle}
+            >
               Progress History
             </NavLink>
           </li>
           <li className="py-4 flex">
             <NavLink
               to="/signin"
-              className="text-green-100 text-lg hover:text-sky-500 font-bold">
+              className={navLinkStyle}
+            >
               Sign In
             </NavLink>
           </li>
           <li className="py-4 flex">
             <NavLink
               to="/workoutscheme"
-              className="text-green-100 text-lg hover:text-sky-500 font-bold">
+              className={navLinkStyle}
+            >
               Workout Scheme
             </NavLink>
           </li>
 
           <li className="py-4 flex">
             <NavLink
-              
-              to="/ReviewsPage"
-              className="text-green-100 text-lg hover:text-sky-500 font-bold">
+              to="/reviewsPage"
+              className={navLinkStyle}
+            >
               Reviews
             </NavLink>
           </li>
 
           <li className="py-4 flex">
             <NavLink
-              to="/ContactPage"
-              className="text-green-100 text-lg hover:text-sky-500 font-bold">
+              to="/contactPage"
+              className={navLinkStyle}
+            >
               Contact us
             </NavLink>
           </li>
-
         </ul>
       </nav>
     </div>

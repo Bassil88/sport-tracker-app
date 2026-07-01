@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Sidebar';
+import Header from './components/navigationItems/Sidebar';
 import ProgressHistory from './pages/ProgressHistory';
 import SignIn from './pages/SignIn';
 import WorkoutScheme from './pages/WorkoutScheme';
