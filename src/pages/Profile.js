@@ -1,18 +1,31 @@
 import React from 'react';
 
-const Profile = () => {
-  // Fetching user data from an API later!!!!
-  const userData = {
-    name: 'Bassil Edelbi',
-    age: 35,
-  };
+// TODO:
+// Replace mock profile data with user information
+// fetched from the ASP.NET Core API.
 
+const mockUser = Object.freeze({
+  name: 'Bassil Edelbi',
+  age: 35,
+});
+
+const Profile = () => {
   return (
-    <div>
-      <h1>Profile</h1>
-      <p>Name: {userData.name}</p>
-      <p>Age: {userData.age}</p>
-    </div>
+    <section className="m-4 rounded-xl bg-gradient-to-r from-sky-900 via-gray-900 bg-opacity-80 p-8 text-white">
+      <h1 className="mb-8 text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
+        User Profile
+      </h1>
+
+      <div className="space-y-4 text-lg">
+        <p>
+          <span className="font-semibold">Name:</span> {mockUser.name}
+        </p>
+
+        <p>
+          <span className="font-semibold">Age:</span> {mockUser.age}
+        </p>
+      </div>
+    </section>
   );
 };
 
