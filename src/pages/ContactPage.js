@@ -11,7 +11,7 @@ const ContactPage = () => {
   };
 
   const mapUrl =
-    'https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed';
+    'https://maps.google.com/maps?width=100%&height=600&hl=en&q=Berlin,Germany&ie=UTF8&t=&z=12&iwloc=B&output=embed';
 
   const mapStyle = {
     filter: 'grayscale(1) contrast(1.2) opacity(0.16)',
@@ -19,9 +19,12 @@ const ContactPage = () => {
 
   return (
     <section className="m-4 text-gray-400 bg-gradient-to-b from-sky-900  via-gray-900 bg-opacity-80 rounded-xl body-font relative">
+    
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+      
         <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           {/* -----------Google Map section---------------------------- */}
+          
           <iframe
             width="100%"
             height="100%"
